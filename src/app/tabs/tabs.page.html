@@ -1,20 +1,95 @@
-<ion-tabs>
+<ion-tabs #tabs>
+  <ion-fab vertical="bottom" translucent="true">
+    <div class="clip-each">
+      <div
+        class="clip-wrap"
+        [ngClass]="{
+      'active': hexagon
+    }"
+        (click)="goToGame()"
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          "
+          class="arrow-down-1"
+        ></div>
+        <div
+          style="
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          "
+          class="arrow-down-2"
+        ></div>
+        <div
+          style="
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          "
+          class="arrow-down-3"
+        ></div>
+        <div class="gold-gradient"></div>
+        <div
+          style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+          "
+        >
+          <ion-label>NEW GAME</ion-label>
+        </div>
+      </div>
+    </div>
+  </ion-fab>
 
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab1">
-      <ion-icon name="triangle"></ion-icon>
-      <ion-label>Tab 1</ion-label>
+  <!-- TAB BAR -->
+  <ion-tab-bar #tabs slot="bottom" class="ion-no-border">
+    <ion-tab-button tab="tab-champions">
+      <div class="arrow-down-1"></div>
+      <div class="arrow-down-2"></div>
+      <div class="arrow-down-3"></div>
+      <div class="gold-gradient"></div>
+      <ion-label>CHAMPIONS</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab2">
-      <ion-icon name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
+    <ion-tab-button tab="tab-items">
+      <div class="arrow-down-1"></div>
+      <div class="arrow-down-2"></div>
+      <div class="arrow-down-3"></div>
+      <div class="gold-gradient"></div>
+      <ion-label>ITEMS</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab3">
-      <ion-icon name="square"></ion-icon>
-      <ion-label>Tab 3</ion-label>
+    <ion-tab-button> </ion-tab-button>
+    <ion-tab-button tab="tab-history">
+      <div class="arrow-down-1"></div>
+      <div class="arrow-down-2"></div>
+      <div class="arrow-down-3"></div>
+      <div class="gold-gradient"></div>
+      <ion-label>HISTORY</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab-profile">
+      <div class="arrow-down-1"></div>
+      <div class="arrow-down-2"></div>
+      <div class="arrow-down-3"></div>
+      <div class="gold-gradient"></div>
+      <ion-label>PROFILE</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
-
 </ion-tabs>
